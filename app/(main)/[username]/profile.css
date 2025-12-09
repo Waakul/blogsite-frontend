@@ -1,0 +1,202 @@
+.profile-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #071018; /* original background shade */
+    color: #e6eef8;       /* original text shade */
+    padding: 20px;
+    border-radius: 12px;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .display-name {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .username {
+    font-size: 14px;
+    color: #a9c6d9; /* muted shade from your palette */
+  }
+  
+  .divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 12px 0;
+  }
+  
+  .avatar-square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #04121a; /* matches card shade */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 8px; /* padding around the icon */
+    width: 68px;
+    height: 68px;
+  }
+  
+  .avatar-square.small {
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+  }
+  
+  .follow-button {
+    background-color: #1d9bf0; /* Twitter-like blue */
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .follow-button.unfollow {
+    background-color: #ffffff0a;
+  }
+
+  .follow-button.unfollow:hover {
+    background-color: #ffffff1c;
+  }
+  
+  .follow-button:hover {
+    background-color: #1a8cd8; /* darker blue on hover */
+  }
+
+  /* Chrome, Edge, Safari */
+.profile-page::-webkit-scrollbar {
+  width: 10px;              /* scrollbar width */
+}
+
+.profile-page::-webkit-scrollbar-track {
+  background: #1e1e1e;      /* dark track */
+}
+
+.profile-page::-webkit-scrollbar-thumb {
+  background-color: #444;   /* dark thumb */
+  border-radius: 5px;
+  border: 2px solid #1e1e1e; /* space around thumb */
+}
+
+.profile-page::-webkit-scrollbar-thumb:hover {
+  background-color: #666;   /* lighter on hover */
+}
+
+/* Firefox */
+.profile-page {
+  scrollbar-width: thin;          /* makes scrollbar thinner */
+  scrollbar-color: #444 #1e1e1e;  /* thumb color + track color */
+}
+
+/* Share Post Button */
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #1d9bf0;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.share-button:hover {
+  background-color: #1a8cd8;
+}
+
+/* PlusIcon */
+.plus-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate icon when share box is open */
+.share-button.open .plus-icon {
+  transform: rotate(45deg); /* turns + into x */
+}
+
+/* Expanded share box */
+.share-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #04121a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.share-box textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #071018;
+  color: #e6eef8;
+  resize: vertical;
+  font-size: 14px;
+}
+
+.share-box textarea::placeholder {
+  color: #a9c6d9;
+}
+
+.share-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancel-button {
+  background: transparent;
+  color: #a9c6d9;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.cancel-button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e6eef8;
+}
+
+.post-button {
+  background-color: #1d9bf0;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.post-button:hover {
+  background-color: #1a8cd8;
+}

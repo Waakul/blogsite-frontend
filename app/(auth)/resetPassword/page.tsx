@@ -3,9 +3,8 @@
 import React, { useState } from 'react'
 import * as Label from '@radix-ui/react-label'
 import { LockClosedIcon, EyeOpenIcon, EyeClosedIcon } from '@radix-ui/react-icons'
-import { slateDark, mauveDark, amber } from '@radix-ui/colors'
 import { useSearchParams } from 'next/navigation'
-import { config } from '../config'
+import { config } from '../../config'
 import Link from 'next/link'
 
 export default function ResetPasswordPage(): JSX.Element {
@@ -56,18 +55,6 @@ export default function ResetPasswordPage(): JSX.Element {
             setLoading(false)
         }
     }
-
-    const radixVars = `
-        :root {
-            --bg: ${slateDark.slate1};
-            --card: ${slateDark.slate3};
-            --muted: ${slateDark.slate9};
-            --text: ${slateDark.slate12};
-            --accent: ${amber.amber9};
-            --input-bg: ${mauveDark.mauve2};
-            --ring: color-mix(in srgb, ${amber.amber9} 18%, transparent);
-        }
-    `
 
     return (
         <>
@@ -151,128 +138,6 @@ export default function ResetPasswordPage(): JSX.Element {
                     </footer>
                 </div>
             </main>
-
-            <style jsx>{`
-                ${radixVars}
-
-                * { box-sizing: border-box; }
-                html, body, :root { height: 100%; }
-
-                .page {
-                    min-height: 100vh;
-                    display: grid;
-                    place-items: center;
-                    padding: 24px;
-                    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-                    background: url('/login-bg.jpg') no-repeat center center;
-                    background-color: rgb(0 0 0 / 83%);
-                    background-blend-mode: multiply;
-                    background-size: cover;
-                    color: var(--text);
-                }
-
-                .card {
-                    width: 100%;
-                    max-width: 420px;
-                    background: var(--card);
-                    border: 1px solid color-mix(in srgb, var(--card), black 6%);
-                    border-radius: 12px;
-                    padding: 24px;
-                    box-shadow: 0 6px 30px color-mix(in srgb, var(--bg), black 60%);
-                }
-
-                .cardHeader {
-                    display: flex;
-                    gap: 12px;
-                    align-items: center;
-                    justify-content: space-between;
-                    margin-bottom: 18px;
-                }
-
-                h1 { margin: 0; font-size: 20px; }
-
-                .form { display: grid; gap: 12px; }
-                .field { display: grid; gap: 6px; }
-                .label { font-size: 13px; color: var(--muted); }
-
-                .inputWrap {
-                    display: flex;
-                    gap: 8px;
-                    align-items: center;
-                    background: linear-gradient(180deg, color-mix(in srgb, var(--input-bg), white 2%), transparent);
-                    border: 1px solid color-mix(in srgb, var(--input-bg), black 6%);
-                    padding: 10px 12px;
-                    border-radius: 8px;
-                }
-
-                .icon { width: 18px; height: 18px; color: var(--muted); flex: 0 0 18px; }
-
-                .input {
-                    background: transparent;
-                    border: none;
-                    outline: none;
-                    color: var(--text);
-                    font-size: 15px;
-                    width: 100%;
-                }
-                .input::placeholder { color: color-mix(in srgb, var(--muted), black 30%); }
-                .input:focus-visible { box-shadow: 0 0 0 4px var(--ring); border-radius: 6px; }
-
-                .eye {
-                    background: transparent;
-                    border: none;
-                    color: var(--muted);
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 4px;
-                    cursor: pointer;
-                    flex: 0 0 28px;
-                }
-
-                .error {
-                    color: #ffb4b4;
-                    background: rgba(255, 75, 75, 0.06);
-                    border: 1px solid rgba(255, 75, 75, 0.12);
-                    padding: 8px 10px;
-                    border-radius: 8px;
-                    font-size: 13px;
-                }
-
-                .success {
-                    color: #b8fbb8;
-                    background: rgba(40, 200, 40, 0.06);
-                    border: 1px solid rgba(40, 200, 40, 0.12);
-                    padding: 10px;
-                    border-radius: 8px;
-                    font-size: 14px;
-                    text-align: center;
-                }
-
-                .submit {
-                    margin-top: 4px;
-                    width: 100%;
-                    padding: 10px 12px;
-                    border-radius: 10px;
-                    border: none;
-                    cursor: pointer;
-                    background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent), black 10%));
-                    color: white;
-                    font-weight: 600;
-                    box-shadow: 0 6px 20px color-mix(in srgb, var(--accent), black 82%);
-                }
-                .submit:disabled { opacity: 0.6; cursor: not-allowed; }
-
-                .cardFooter {
-                    display: flex;
-                    justify-content: space-between;
-                    margin-top: 16px;
-                    gap: 12px;
-                    font-size: 13px;
-                }
-                .link { color: var(--muted); font-size: 13px; text-decoration: none; }
-                .link:hover { color: var(--text); text-decoration: underline; }
-            `}</style>
         </>
     )
 }

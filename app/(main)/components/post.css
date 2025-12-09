@@ -1,0 +1,41 @@
+.blog-profile-icon-square {
+    width: 48px;       /* square width */
+    height: 48px;      /* square height */
+    display: flex;     /* center the icon */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.08); /* optional border */
+    border-radius: 8px;     /* small rounding, remove if you want sharp corners */
+    background-color: #04121a; /* optional background */
+}
+
+.blog-card {
+    background: #04121a; /* card shade */
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .blog-card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .blog-card-user {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+  
+  .blog-text {
+    font-size: 17px;
+    color: #e6eef8;
+  }
+  .post-time {
+    font-size: 12px;
+    color: #a9c6d9;
+  }

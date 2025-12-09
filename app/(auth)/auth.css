@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+* { box-sizing: border-box; }
+
+:root {
+    height: 100%;
+}
+
+.page {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: url('/login-bg.jpg') no-repeat center center;
+    background-color: rgb(0 0 0 / 83%);
+    background-blend-mode: multiply;
+    background-size: cover;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    color: var(--text);
+}
+
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--card);
+    border: 1px solid color-mix(in srgb, var(--card), black 6%);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 6px 30px color-mix(in srgb, var(--bg), black 60%);
+}
+
+.cardHeader {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: -0.2px;
+}
+
+.form {
+    display: grid;
+    gap: 12px;
+}
+.field {
+    display: grid;
+    gap: 6px;
+}
+.label {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.inputWrap {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background: linear-gradient(180deg, color-mix(in srgb, var(--input-bg), white 2%), transparent);
+    border: 1px solid color-mix(in srgb, var(--input-bg), black 6%);
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    color: var(--muted);
+    flex: 0 0 18px;
+}
+
+.input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text);
+    font-size: 15px;
+    width: 100%;
+}
+.input::placeholder {
+    color: color-mix(in srgb, var(--muted), black 30%);
+}
+
+.input:focus-visible {
+    box-shadow: 0 0 0 4px var(--ring);
+    border-radius: 6px;
+}
+
+.error {
+    color: #ffb4b4;
+    background: rgba(255, 75, 75, 0.06);
+    border: 1px solid rgba(255, 75, 75, 0.12);
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.submit {
+    margin-top: 4px;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent), black 10%));
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 6px 20px color-mix(in srgb, var(--accent), black 82%);
+}
+.submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    gap: 12px;
+    font-size: 13px;
+}
+.link {
+    color: var(--muted);
+    font-size: 13px;
+    text-decoration: none;
+}
+.link:hover {
+    color: var(--text);
+    text-decoration: underline;
+}

@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    background: #071018; /* original dark background */
+    color: #e6eef8;       /* original text color */
+}
+
+main {
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    padding-block: 24px;
+}

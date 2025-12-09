@@ -1,0 +1,97 @@
+.sidebar {
+width: 76px;
+background: #04121a;
+border-right: 1px solid rgba(255, 255, 255, 0.04);
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+padding: 16px 8px;
+position: relative;
+}
+
+.sidebar-top {
+display: flex;
+flex-direction: column;
+gap: 12px;
+align-items: center;
+}
+
+.sidebar-link {
+width: 44px;
+height: 44px;
+display: grid;
+place-items: center;
+border-radius: 10px;
+text-decoration: none;
+}
+
+.sidebar-link.explore {
+color: #9fe3ff;
+}
+
+.sidebar-link.search {
+color: #b8dff6; 
+}
+
+.sidebar-bottom {
+display: flex;
+flex-direction: column;
+gap: 10px;
+align-items: center;
+position: relative;
+}
+
+.sidebar-button {
+width: 44px;
+height: 44px;
+border-radius: 10px;
+background: transparent;
+border: none;
+cursor: pointer;
+display: grid;
+place-items: center;
+}
+
+.sidebar-button.profile {
+width: 48px;
+height: 48px;
+border-radius: 12px;
+border: none;
+background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+);
+color: #fff;
+}
+
+.sidebar-button.settings {
+color: #a9c6d9; 
+}
+
+.sidebar-button.logout {
+color: #f5a8a8; 
+}
+
+.sidebar-button.login {
+    color: #d1ffa3; 
+}
+
+.search-panel {
+    width: 300px;
+    background: #04121a;
+    border-right: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 16px;
+    color: #fff;
+}
+
+.search-input {
+width: 100%;
+padding: 8px;
+border-radius: 6px;
+border: 0;
+background: transparent;
+color: #e6eef8;
+}
+  
