@@ -298,7 +298,7 @@ export default function RegisterPage(): JSX.Element {
                                 const form = card?.querySelector('form')
                                 if (!form) return
 
-                                const submitCaptureHandler = (e) => {
+                                const submitCaptureHandler = (e: any) => {
                                     const pw = (document.getElementById('password') as HTMLInputElement | null)?.value || ''
                                     const cp = (document.getElementById('confirmPassword') as HTMLInputElement | null)?.value || ''
                                     if (cp && pw !== cp) {
