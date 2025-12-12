@@ -109,6 +109,7 @@
   gap: 20px;
   max-height: 89vh;
   padding-bottom: 20px;
+  height: 100%;
 }
 
 .side-panel {
