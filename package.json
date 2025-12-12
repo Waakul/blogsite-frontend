@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 5400",
+    "prod": "npm run build && pm2 start npm --name BlogIt -- start",
+    "update": "git pull && npm install && npm run prod",
     "lint": "eslint"
   },
   "dependencies": {
