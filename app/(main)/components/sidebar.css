@@ -31,7 +31,8 @@ color: #9fe3ff;
 }
 
 .sidebar-link.search {
-color: #b8dff6; 
+color: #b8dff6;
+cursor: pointer;
 }
 
 .sidebar-bottom {
@@ -94,4 +95,19 @@ border: 0;
 background: transparent;
 color: #e6eef8;
 }
+
+/* Search Panel Placeholder */
+.search-placeholder {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 14px;
+    text-align: center;
+  }
   
+  /* Results Wrapper */
+  .search-results {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }

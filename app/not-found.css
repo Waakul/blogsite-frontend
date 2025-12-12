@@ -1,0 +1,33 @@
+.notfound-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-block: 24px;
+    background: #071018;
+    color: #e6eef8;
+  }
+  
+  .error-title {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #9fe3ff;
+  }
+  
+  .error-message {
+    font-size: 1.25rem;
+    margin: 12px 0;
+    color: #b8dff6;
+  }
+  
+  .back-home {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #d1ffa3;
+    font-weight: bold;
+  }
+  .back-home:hover {
+    text-decoration: underline;
+  }
+  

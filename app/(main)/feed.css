@@ -1,0 +1,172 @@
+.feed-page {
+  width: 100%;
+  margin: 0 auto;
+  background: #071018;
+  color: #e6eef8;
+  border-radius: 12px;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.feed-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.feed-welcome {
+  font-size: 26px;
+  font-weight: 650;
+}
+
+.feed-username {
+  font-size: 14px;
+  color: #a9c6d9;
+}
+
+/* Divider */
+.divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 12px 0;
+  margin-bottom: 32px;
+}
+
+/* Posts list */
+.posts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Empty state */
+.empty-feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  color: #666;
+}
+
+.empty-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.empty-sub {
+  font-size: 14px;
+}
+
+.feed-page::-webkit-scrollbar {
+  width: 10px;
+}
+
+.feed-page::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.feed-page::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 5px;
+  border: 2px solid #1e1e1e;
+}
+
+.feed-page::-webkit-scrollbar-thumb:hover {
+  background-color: #666;
+}
+
+/* Firefox */
+.feed-page {
+  scrollbar-width: thin;
+  scrollbar-color: #444 #1e1e1e;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.page {
+  padding-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-height: 89vh;
+  padding-bottom: 20px;
+}
+
+.side-panel {
+  height: 98%;
+  width: 500px;
+  background-color: #04121a;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.side-section {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  min-height: 0; 
+}
+
+.side-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.profiles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+.profiles-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.profiles-list::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.profiles-list::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 5px;
+  border: 2px solid #1e1e1e;
+}
+
+.profiles-list::-webkit-scrollbar-thumb:hover {
+  background-color: #666;
+}
+
+/* Firefox */
+.profiles-list {
+  scrollbar-width: thin;
+  scrollbar-color: #444 #1e1e1e;
+}

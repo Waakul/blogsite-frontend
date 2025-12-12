@@ -7,6 +7,8 @@ import { config } from "./config";
 type User = {
   username: string;
   displayName: string;
+  following: {username: string, displayName: string}[]
+  followers: {username: string, displayName: string}[]
 };
 
 type AuthContextType = {
@@ -68,6 +70,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         setUser({
           username: data.username,
           displayName: data.displayName,
+          following: data.following,
+          followers: data.followers,
         });
       } catch (err) {
         console.error("Verification failed:", err);

@@ -1,0 +1,45 @@
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.02);
+    transition: background 0.15s ease;
+  }
+  
+  .profile-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Profile icon */
+  .profile-card-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.02)
+    );
+    display: grid;
+    place-items: center;
+    color: #b8dff6;
+  }
+  
+  /* Display name + username area */
+  .profile-card-text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-card-displayname {
+    font-size: 15px;
+    color: #fff;
+  }
+  
+  .profile-card-username {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+  }

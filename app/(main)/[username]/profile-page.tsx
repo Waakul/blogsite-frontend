@@ -1,45 +1,52 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { PersonIcon, PlusIcon } from "@radix-ui/react-icons";
 import Post from "../components/post";
 import { useAuth } from "@/app/AuthWrapper";
 import { config } from "@/app/config";
+import { useSearchParams } from 'next/navigation'
 
 export default function ProfilePage({posts, displayName, username, followerCount, followingCount, isFollowing}: any): JSX.Element {
   const { user } = useAuth();
-
-  // Posts state now comes from props initially
+  const searchParams = useSearchParams();
+  
   const [postsState, setPosts] = useState(posts || []);
   const [isSharing, setIsSharing] = useState(false);
+  useEffect(() => {
+    const shouldOpen =
+      searchParams.get("postbox") === "true" &&
+      username === user?.username;
+  
+    if (shouldOpen) {
+      setIsSharing(true);
+    }
+  }, [searchParams, username, user?.username]);
   const [newPost, setNewPost] = useState("");
   const [isFollowingUser, setIsFollowingUser] = useState(isFollowing || false);
 
   const handlePost = async () => {
     if (!newPost.trim()) return;
-
+  
+    // Remove all empty lines BEFORE the first non-empty character
+    const cleaned = newPost.replace(/^\n+/, "");
+  
     try {
-      // Send to backend
       const res = await fetch(`${config.api_url}/post`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
         body: JSON.stringify({
-          content: newPost,
+          content: cleaned,
         }),
       });
-
+  
       if (!res.ok) throw new Error("Failed to create post");
-
+  
       const data = await res.json();
-
-      // Append to local posts state
-      setPosts((prev: any) => [
-        data.post,
-        ...prev, // prepend to show newest first
-      ]);
-
-      // Reset share box
+  
+      setPosts((prev: any) => [data.post, ...prev]);
+  
       setNewPost("");
       setIsSharing(false);
     } catch (err) {
@@ -47,6 +54,7 @@ export default function ProfilePage({posts, displayName, username, followerCount
       alert("Failed to create post. Please try again.");
     }
   };
+  
 
   return (
     <div className="profile-page">
@@ -101,7 +109,7 @@ export default function ProfilePage({posts, displayName, username, followerCount
 
       {/* Share Post Box */}
       {user && username === user.username && (
-        <div style={{ margin: "20px 0" }}>
+        <div style={{ marginBottom: "20px" }}>
           {!isSharing ? (
             <button
                 className="share-button"

@@ -35,7 +35,7 @@ export default function Post({ username, displayName, content, createdAt }: Post
           <span className="username">@{username}</span>
         </div>
       </div>
-      <p className="blog-text">{content}</p>
+      <div className="blog-text" dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, "<br />") }} />
       <span className="post-time">{formattedDate}</span>
     </div>
   );

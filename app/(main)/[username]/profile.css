@@ -32,13 +32,14 @@
   
   .username {
     font-size: 14px;
-    color: #a9c6d9; /* muted shade from your palette */
+    color: #a9c6d9;
   }
   
   .divider {
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     margin: 12px 0;
+    margin-bottom: 20px;
   }
   
   .avatar-square {
