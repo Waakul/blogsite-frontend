@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { JSX, useState } from 'react'
 import * as Label from '@radix-ui/react-label'
 import { PersonIcon, LockClosedIcon, EyeOpenIcon, EyeClosedIcon } from '@radix-ui/react-icons'
 import { config } from '../../config'

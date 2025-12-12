@@ -3,6 +3,7 @@
 import { PersonIcon } from "@radix-ui/react-icons";
 import { useRouter } from "next/navigation";
 import './profile.css';
+import { JSX } from "react";
 
 type ProfileProps = {
     u: {

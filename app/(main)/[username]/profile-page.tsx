@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { JSX, useState, useEffect } from "react";
 import { PersonIcon, PlusIcon } from "@radix-ui/react-icons";
 import Post from "../components/post";
 import { useAuth } from "@/app/AuthWrapper";
