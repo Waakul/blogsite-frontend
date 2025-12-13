@@ -42,7 +42,7 @@ export default function LoginPage(): JSX.Element {
                 throw new Error(data.message || 'Login failed')
             }
 
-            document.cookie = `sessionId=${(await response.json()).sessionId}; domain=${config.api_domain}; path=/; max-age=604800; SameSite=None; Secure`;
+            document.cookie = `sessionId=${(await response.json()).sessionId}; domain=${config.api_parent_domain}; path=/; max-age=604800; SameSite=None; Secure`;
         
             window.location.href = '/'
         } catch {
