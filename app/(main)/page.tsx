@@ -78,7 +78,7 @@ export default function FeedPage({ posts }: any) {
           </span>
         ) : (<span className="title"
                     style={{ fontSize: 26, fontWeight: 650 }} onClick={() => {
-                      document.cookie = "sessionId=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+                      document.cookie = "sessionId=; domain=; SameSite=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
                       window.location.href = "/login";
                     }}>
                     Login to BlogIt <button

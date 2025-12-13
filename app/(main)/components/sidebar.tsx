@@ -108,7 +108,7 @@ export default function Sidebar() {
                 aria-label="Logout"
                 title="Logout"
                 onClick={() => {
-                  document.cookie = "sessionId=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+                  document.cookie = "sessionId=; domain=; SameSite=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
                   window.location.href = "/login";
                 }}
                 className="sidebar-button logout"
@@ -122,7 +122,7 @@ export default function Sidebar() {
                 aria-label="Login"
                 title="Login"
                 onClick={() => {
-                  document.cookie = "sessionId=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+                  document.cookie = "sessionId=; domain=; SameSite=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
                   window.location.href = "/login";
                 }}
                 className="sidebar-button login"

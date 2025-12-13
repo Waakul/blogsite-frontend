@@ -36,7 +36,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   // Helper to delete a cookie
   const deleteCookie = (name: string) => {
-    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+    document.cookie = `${name}=; domain=; SameSite=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
   };
 
   useEffect(() => {
